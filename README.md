@@ -30,4 +30,4 @@
 - `data/`：数据来源说明（不放原始数据，仅说明字段结构）
 
 ## 数据来源
-UCI Machine Learning Repository - Online Retail Dataset (2010-2011)
+kaggle-UCI Machine Learning Repository - Online Retail Dataset (2010-2011)
