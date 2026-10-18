@@ -2,7 +2,7 @@
 
 ## 从 54 万行交易到可执行的增长策略
 
-产品经理 / 产品运营实习作品集 · MySQL · Power BI · 数据分析
+ MySQL · Power BI · 数据分析
 
 基于 UCI Online Retail 2010-2011 的 541,909 行交易，完成数据清洗、指标建模、Power BI 看板和经营分析，输出客户留存、退货治理和批发/零售分群的业务建议。
 
@@ -70,7 +70,7 @@ Top 20 商品只贡献 12.1% 净销售额，商品组合较分散；运营重点
 
 ## 我做了什么
 
-- **数据清洗**：建立原始层、Staging、清洗层、星型模型和聚合层五层管道；保留异常行并用 `is_*` 字段标记，保证每个数字可追溯。
+- **数据清洗**：借助chatgpt辅助建立原始层、Staging、清洗层、星型模型和聚合层五层管道；保留异常行并用 `is_*` 字段标记，保证每个数字可追溯。
 - **指标建模**：定义毛/净商品销售额、订单数、客户数、退货率、复购率；建立日期、客户、商品、国家维度和销售事实表。
 - **客户分析**：用 RFM、cohort、复购率和客户价值分层识别 Champions、At Risk、Hibernating 等运营对象。
 - **商品分析**：用净销售额、ABC 分类、退货金额和整单退货标记，识别“看起来畅销、实际不赚钱”的商品。
@@ -91,9 +91,9 @@ Top 20 商品只贡献 12.1% 净销售额，商品组合较分散；运营重点
 
 | 交付物 | 说明 |
 |---|---|
-| [Power BI 看板](powerbi/Online_Retail_手动看板.pbix) | 可交互 PBIX，包含经营总览、商品与退货、客户价值与留存等页面 |
+| [Power BI 看板](powerbi/Oonline retail 2010-2011 销售分析.pbix) | 可交互 PBIX，包含经营总览、商品与退货、客户价值与留存等页面 |
 | [分析报告 PPT](presentation/Online_Retail_经营分析_作品集_v3.pptx) | 13 页作品集汇报，包含结论、证据和行动建议 |
-| [SQL 清洗脚本](sql/) | 建库、导入、清洗、建模、聚合和导出 |
+| [SQL 清洗脚本](SQL/) | 建库、导入、清洗、建模、聚合和导出 |
 | [分析结论与业务建议](docs/分析结论与业务建议.md) | 完整指标、结论、P0/P1/P2 和 30/60/90 计划 |
 | [指标字典](docs/data_dictionary.csv) | 字段、类型和业务含义 |
 
@@ -113,4 +113,4 @@ Top 20 商品只贡献 12.1% 净销售额，商品组合较分散；运营重点
 - [MySQL 核心清洗逐行注释版](sql/annotated/03_clean_transactions_annotated.sql)
 - [Power BI 搭建说明](docs/technical/PowerBI搭建说明.md)
 
-数据源：UCI Machine Learning Repository, Online Retail Data Set。
+数据源：kaggle-UCI Machine Learning Repository, Online Retail Data Set。
