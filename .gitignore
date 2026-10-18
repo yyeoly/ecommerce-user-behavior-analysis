@@ -1,0 +1,16 @@
+# 临时目录
+work/
+outputs/
+.codex-finalizer/
+.chart-data-*/
+
+# 临时文件
+*.tmp
+*.log
+~$*
+.DS_Store
+Thumbs.db
+
+# 大文件：完整事实表不要提交
+powerbi/data/fact_sales.csv
+
