@@ -1,0 +1,130 @@
+table_name,field_name,data_type,description
+fact_sales,line_id,integer,清洗后交易行ID
+fact_sales,invoice_no,string,发票号
+fact_sales,date_key,integer,日期键 YYYYMMDD
+fact_sales,invoice_datetime,datetime,发票时间
+fact_sales,customer_key,integer,客户键；匿名客户为0
+fact_sales,stock_code,string,商品编码
+fact_sales,country_key,integer,国家键
+fact_sales,country,string,国家/地区
+fact_sales,quantity,integer,数量；退货为负
+fact_sales,unit_price,decimal,单价 GBP
+fact_sales,line_revenue,decimal,行销售额 GBP
+fact_sales,invoice_type,string,Sale/Return/Adjustment
+fact_sales,is_cancellation,integer,是否取消/退货发票
+fact_sales,is_product,integer,是否商品行
+fact_sales,is_valid_sale,integer,是否有效正向销售行
+fact_sales,is_product_sale,integer,是否商品销售行
+fact_sales,is_customer_sale,integer,是否可归属客户的商品销售行
+fact_sales,is_missing_customer,integer,客户ID是否缺失
+fact_sales,is_duplicate,integer,是否重复行
+fact_sales,has_zero_price,integer,单价是否为0
+fact_sales,has_negative_price,integer,单价是否为负
+fact_sales,order_hour,integer,发票小时
+fact_sales,day_of_week,integer,星期几；1=Monday
+dim_date,date_key,integer,日期键 YYYYMMDD
+dim_date,full_date,date,完整日期
+dim_date,year_number,integer,年份
+dim_date,quarter_number,integer,季度
+dim_date,month_number,integer,月份
+dim_date,month_name,string,月份英文名
+dim_date,month_key,string,YYYY-MM
+dim_date,day_of_week,integer,1=Monday
+dim_date,day_name,string,星期英文名
+dim_date,is_weekend,integer,是否周末
+dim_date,is_complete_month,integer,是否完整月；2011-12为0
+dim_customer,customer_key,integer,客户键
+dim_customer,customer_id,integer,原始客户ID
+dim_customer,country,string,最近一次国家
+dim_customer,first_order_date,date,首购日期
+dim_customer,last_order_date,date,最近购买日期
+dim_customer,orders,integer,订单数
+dim_customer,units,integer,购买件数
+dim_customer,gross_revenue,decimal,毛销售额 GBP
+dim_customer,return_amount,decimal,退货金额 GBP
+dim_customer,net_revenue,decimal,净销售额 GBP
+dim_customer,aov,decimal,客单价 GBP
+dim_customer,recency_days,integer,距快照日天数
+dim_customer,r_score,integer,R分数1-5
+dim_customer,f_score,integer,F分数1-5
+dim_customer,m_score,integer,M分数1-5
+dim_customer,segment,string,RFM分层
+dim_customer,has_purchases,integer,是否有购买
+dim_product,stock_code,string,商品编码
+dim_product,description,string,商品描述
+dim_product,category,string,关键词派生类目
+dim_product,units_sold,integer,销售件数
+dim_product,gross_revenue,decimal,毛销售额 GBP
+dim_product,net_revenue,decimal,净销售额 GBP
+dim_product,net_units,integer,净件数
+dim_product,return_units,integer,退货件数
+dim_product,return_amount,decimal,退货金额 GBP
+dim_product,return_rate,decimal,退货率
+dim_product,avg_selling_price,decimal,平均售价 GBP
+dim_product,abc_class,string,ABC分类
+agg_monthly_kpi,month_key,string,YYYY-MM
+agg_monthly_kpi,gross_revenue,decimal,毛销售额 GBP
+agg_monthly_kpi,return_amount,decimal,退货金额 GBP
+agg_monthly_kpi,net_revenue,decimal,净销售额 GBP
+agg_monthly_kpi,orders,integer,订单数
+agg_monthly_kpi,active_customers,integer,活跃客户数
+agg_monthly_kpi,new_customers,integer,新客数
+agg_monthly_kpi,returning_customers,integer,复购客户数
+agg_monthly_kpi,aov_gross,decimal,平均客单价 GBP
+agg_monthly_kpi,return_rate,decimal,退货率
+agg_monthly_kpi,revenue_growth_pct,decimal,毛销售额环比
+agg_country_summary,country,string,国家/地区
+agg_country_summary,gross_revenue,decimal,毛销售额 GBP
+agg_country_summary,net_revenue,decimal,净销售额 GBP
+agg_country_summary,orders,integer,订单数
+agg_country_summary,customers,integer,客户数
+agg_country_summary,aov,decimal,客单价 GBP
+agg_country_summary,return_rate,decimal,退货率
+agg_country_summary,revenue_share,decimal,收入占比
+agg_product_summary,stock_code,string,商品编码
+agg_product_summary,description,string,商品描述
+agg_product_summary,category,string,派生类目
+agg_product_summary,net_revenue,decimal,净销售额 GBP
+agg_product_summary,return_rate,decimal,退货率
+agg_product_summary,abc_class,string,ABC分类
+agg_product_summary,revenue_rank,integer,净销售额排名
+agg_rfm_segments,segment,string,RFM分层
+agg_rfm_segments,customers,integer,客户数
+agg_rfm_segments,net_revenue,decimal,净销售额 GBP
+agg_rfm_segments,customer_share,decimal,客户占比
+agg_rfm_segments,revenue_share,decimal,收入占比
+agg_rfm_segments,avg_orders,decimal,平均订单数
+agg_rfm_segments,avg_recency_days,decimal,平均最近购买间隔
+agg_cohort_retention,cohort_month,date,首购月
+agg_cohort_retention,period_index,integer,首购后月数；0=首购月
+agg_cohort_retention,cohort_customers,integer,cohort人数
+agg_cohort_retention,active_customers,integer,当月活跃人数
+agg_cohort_retention,retention_rate,decimal,留存率
+agg_weekday_hour,day_name,string,星期
+agg_weekday_hour,order_hour,integer,发票小时
+agg_weekday_hour,gross_revenue,decimal,毛销售额 GBP
+agg_weekday_hour,orders,integer,订单数
+agg_weekday_hour,customers,integer,客户数
+agg_returns_monthly,month_key,string,YYYY-MM
+agg_returns_monthly,return_invoices,integer,退货发票数
+agg_returns_monthly,return_amount,decimal,退货金额 GBP
+agg_returns_monthly,gross_revenue,decimal,毛销售额 GBP
+agg_returns_monthly,return_rate,decimal,退货率
+agg_order_summary,invoice_no,string,发票号
+agg_order_summary,order_datetime,datetime,订单时间
+agg_order_summary,customer_key,integer,客户键
+agg_order_summary,country,string,国家
+agg_order_summary,gross_revenue,decimal,订单金额 GBP
+agg_order_summary,order_value_band,string,订单金额带
+agg_kpi_overview,total_gross_revenue,decimal,毛商品销售额 GBP
+agg_kpi_overview,total_return_amount,decimal,商品退货金额 GBP
+agg_kpi_overview,total_net_revenue,decimal,净商品销售额 GBP
+agg_kpi_overview,total_orders,integer,订单数
+agg_kpi_overview,total_customers,integer,可识别客户数
+agg_kpi_overview,overall_aov,decimal,平均客单价 GBP
+agg_kpi_overview,median_order_value,decimal,客单价中位数 GBP
+agg_kpi_overview,repeat_purchase_rate,decimal,复购率
+agg_kpi_overview,overall_return_rate,decimal,退货率
+agg_kpi_overview,international_revenue_share,decimal,国际收入占比
+agg_kpi_overview,top10pct_customer_revenue_share,decimal,Top10%客户收入占比
+agg_kpi_overview,top20_product_revenue_share,decimal,Top20商品收入占比
