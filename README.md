@@ -2,13 +2,13 @@
 
 ## 从 54 万行交易到可执行的增长策略
 
-产品运营 / 用户运营 / 产品经理（数据方向）作品集 · MySQL · Power BI
+MySQL · Power BI
 
 基于 UCI Online Retail 2010-2011 的 541,909 行交易，完成数据清洗、指标建模、Power BI 看板和经营分析，输出客户留存、退货治理和批发/零售分群的业务建议。
 
 ## 项目概览
 
-这不是一个“做完几张图”的练习，而是围绕三个业务问题展开的完整分析：
+这是围绕三个业务问题展开的完整分析：
 
 1. **增长来自哪里**：哪些类目、商品和地区在拉动净销售额？
 2. **利润被什么侵蚀**：退货、整单取消和异常价格如何影响真实销售？
@@ -85,8 +85,8 @@
 
 | 交付物 | 说明 |
 |---|---|
-| [Power BI 看板](powerbi/Online_Retail_手动看板.pbix) | 可交互 PBIX，包含经营总览、商品与退货、客户价值与留存等页面 |
-| [分析报告 PPT](presentation/Online_Retail_经营分析_作品集_v4.pptx) | 14 页运营分析汇报，包含用户行为、结论和行动建议 |
+| [Power BI 看板](powerbi/online retail 2010-2011 销售分析.pbix) | 可交互 PBIX，包含经营总览、商品与退货、客户价值与留存等页面 |
+| [分析报告 PPT](presentation/Online Retail 经营分析.pptx) | 14 页运营分析汇报，包含用户行为、结论和行动建议 |
 | [SQL 清洗脚本](sql/) | 建库、导入、清洗、建模、聚合和导出 |
 | [分析结论与业务建议](docs/分析结论与业务建议.md) | 完整指标、结论、P0/P1/P2 和 30/60/90 计划 |
 | [指标字典](docs/data_dictionary.csv) | 字段、类型和业务含义 |
@@ -99,12 +99,5 @@
 - 数据没有成本、毛利、退货原因和渠道字段，无法直接算利润和归因；
 - RFM 分层是一套可解释的业务规则，不是唯一答案。
 
-## 技术附录
 
-如果你需要看方法细节：
-
-- [MySQL 数据清洗逐行讲解](docs/technical/MySQL数据清洗逐行讲解.md)
-- [MySQL 核心清洗逐行注释版](sql/annotated/03_clean_transactions_annotated.sql)
-- [Power BI 搭建说明](docs/technical/PowerBI搭建说明.md)
-
-数据源：UCI Machine Learning Repository, Online Retail Data Set。
+数据源：kaggle-UCI Machine Learning Repository, Online Retail Data Set。
