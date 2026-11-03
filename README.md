@@ -50,15 +50,15 @@ MySQL · Power BI
 
 ## 看板预览
 
-![经营总览] powerbi/screenshots/overview.png
+[经营总览] powerbi/screenshots/overview.png
 
 *经营总览：KPI、月度趋势和类目结构*
 
-![商品与退货] powerbi/screenshots/products.png
+[商品与退货] powerbi/screenshots/products.png
 
 *商品与退货：Top 商品、退货金额和异常案例*
 
-![用户价值与留存] powerbi/screenshots/customers.png
+[用户价值与留存] powerbi/screenshots/customers.png
 
 *客户价值：RFM 分层和客户结构*
 
