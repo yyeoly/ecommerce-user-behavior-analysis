@@ -50,15 +50,15 @@ MySQL · Power BI
 
 ## 看板预览
 
-![经营总览](powerbi/screenshots/overview.png)
+![经营总览] powerbi/screenshots/overview.png
 
 *经营总览：KPI、月度趋势和类目结构*
 
-![商品与退货](powerbi/screenshots/products.png)
+![商品与退货] powerbi/screenshots/products.png
 
 *商品与退货：Top 商品、退货金额和异常案例*
 
-![用户价值与留存](powerbi/screenshots/customers.png)
+![用户价值与留存] powerbi/screenshots/customers.png
 
 *客户价值：RFM 分层和客户结构*
 
@@ -85,11 +85,11 @@ MySQL · Power BI
 
 | 交付物 | 说明 |
 |---|---|
-| [Power BI 看板](powerbi/online retail 2010-2011 销售分析.pbix) | 可交互 PBIX，包含经营总览、商品与退货、客户价值与留存等页面 |
-| [分析报告 PPT](presentation/Online Retail 经营分析.pptx) | 14 页运营分析汇报，包含用户行为、结论和行动建议 |
-| [SQL 清洗脚本](sql/) | 建库、导入、清洗、建模、聚合和导出 |
-| [分析结论与业务建议](docs/分析结论与业务建议.md) | 完整指标、结论、P0/P1/P2 和 30/60/90 计划 |
-| [指标字典](docs/data_dictionary.csv) | 字段、类型和业务含义 |
+| [Power BI 看板] powerbi/online retail 2010-2011 销售分析.pbix | 可交互 PBIX，包含经营总览、商品与退货、客户价值与留存等页面 |
+| [分析报告 PPT] presentation/Online Retail 经营分析.pptx | 14 页运营分析汇报，包含用户行为、结论和行动建议 |
+| [SQL 清洗脚本] SQL | 建库、导入、清洗、建模、聚合和导出 |
+| [分析结论与业务建议] docs/分析结论与业务建议.md | 完整指标、结论、P0/P1/P2 和 30/60/90 计划 |
+| [指标字典] docs/data_dictionary.csv | 字段、类型和业务含义 |
 
 ## 项目边界
 
